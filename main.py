@@ -4,6 +4,7 @@ from solver import *
 def main():
     n = 8
     solver = Nqueens(n)
+    print(solver.queenPosition)
 
     while not solver.safe_board():
         # these are the maximum possible attacks.
