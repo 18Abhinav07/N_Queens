@@ -4,10 +4,10 @@ import random
 class Nqueens:
     def __init__(self, size):
         self.size = size
-        self.queenPosition = [(0, 0), (1, 5), (2, 0), (3, 7), (4, 6), (5, 1), (6, 0), (7, 2)]
-        # for x in range(size):
-        #     randomIndex = random.randint(0, size - 1)
-        #     self.queenPosition.append((x, randomIndex))
+        self.queenPosition = []
+        for x in range(size):
+            randomIndex = random.randint(0, size - 1)
+            self.queenPosition.append((x, randomIndex))
 
     def pickRandomQueen(self):
         newIndex = random.randint(0, len(self.queenPosition) - 1)
@@ -62,3 +62,6 @@ class Nqueens:
                 if a == c or b == d or abs(a - c) == abs(b - d):
                     return True
         return False
+
+
+

@@ -1,4 +1,4 @@
-from solver import *
+from min_conflict_solver import *
 
 
 def main():

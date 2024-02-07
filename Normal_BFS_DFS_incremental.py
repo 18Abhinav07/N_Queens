@@ -1,10 +1,14 @@
+import copy
 from queue import Queue
+import random
 
 
 class NQueens:
 
     def __init__(self, size):
         self.size = size
+        self.queen_comp = [(i, 0) for i in range(size)]
+        self.explored_s = []
 
     def solve_dfs(self):
         if self.size < 1:
@@ -86,6 +90,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
